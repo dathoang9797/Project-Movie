@@ -1,0 +1,5 @@
+{
+  "name": "LocationManagerProfilePage",
+  "main": "./LocationManagerProfilePage.jsx",
+  "private": true
+}

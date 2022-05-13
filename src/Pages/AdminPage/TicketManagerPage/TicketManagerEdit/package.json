@@ -1,0 +1,5 @@
+{
+  "name": "TicketManagerEdit",
+  "main": "./TicketManagerEdit.jsx",
+  "private": true
+}

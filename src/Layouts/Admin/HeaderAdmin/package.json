@@ -1,0 +1,5 @@
+{
+  "name": "HeaderAdmin",
+  "main": "./HeaderAdmin.jsx",
+  "private": true
+}

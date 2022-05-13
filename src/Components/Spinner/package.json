@@ -1,0 +1,5 @@
+{
+  "name": "Spinner",
+  "main": "./Spinner.jsx",
+  "private": true
+}

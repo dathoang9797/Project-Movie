@@ -1,0 +1,5 @@
+{
+  "name": "DetailPage",
+  "main": "./DetailPage.jsx",
+  "private": true
+}

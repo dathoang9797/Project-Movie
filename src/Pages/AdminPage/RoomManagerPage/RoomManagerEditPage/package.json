@@ -1,0 +1,5 @@
+{
+  "name": "RoomManagerEditPage",
+  "main": "./RoomManagerEditPage.jsx",
+  "private": true
+}

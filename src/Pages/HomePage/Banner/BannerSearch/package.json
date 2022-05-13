@@ -1,0 +1,5 @@
+{
+  "name": "BannerSearch",
+  "main": "./BannerSearch.jsx",
+  "private": true
+}

@@ -1,0 +1,5 @@
+{
+  "name": "UserManagerProfilePage",
+  "main": "./UserManagerProfilePage.jsx",
+  "private": true
+}

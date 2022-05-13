@@ -1,0 +1,5 @@
+{
+  "name": "FormSelect",
+  "main": "./FormSelect.jsx",
+  "private": true
+}

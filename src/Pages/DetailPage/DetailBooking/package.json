@@ -1,0 +1,5 @@
+{
+  "name": "DetailBooking",
+  "main": "./DetailBooking.jsx",
+  "private": true
+}

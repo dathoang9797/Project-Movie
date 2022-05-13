@@ -1,0 +1,5 @@
+{
+  "name": "SpinnerFallBack",
+  "main": "./SpinnerFallBack.jsx",
+  "private": true
+}

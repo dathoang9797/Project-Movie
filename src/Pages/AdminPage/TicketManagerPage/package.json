@@ -1,0 +1,5 @@
+{
+  "name": "TicketManagerPage",
+  "main": "./TicketManagerPage.jsx",
+  "private": true
+}

@@ -1,0 +1,5 @@
+{
+  "name": "LocationManagerAdd",
+  "main": "./LocationManagerAdd.jsx",
+  "private": true
+}

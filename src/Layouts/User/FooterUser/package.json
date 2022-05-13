@@ -1,0 +1,5 @@
+{
+  "name": "FooterUser",
+  "main": "./FooterUser.jsx",
+  "private": true
+}

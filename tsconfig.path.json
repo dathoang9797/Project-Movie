@@ -1,0 +1,97 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@": [
+                "src"
+            ],
+            "@Admin": [
+                "src/Admin"
+            ],
+            "@Components": [
+                "src/Components"
+            ],
+            "@Redux": [
+                "src/Redux"
+            ],
+            "@Assets": [
+                "src/Assets"
+            ],
+            "@Config": [
+                "src/Config"
+            ],
+            "@HOC": [
+                "src/HOC"
+            ],
+            "@Layouts": [
+                "src/Layouts"
+            ],
+            "@Routers": [
+                "src/Routers"
+            ],
+            "@Services": [
+                "src/Services"
+            ],
+            "@Shared": [
+                "src/Shared"
+            ],
+            "@Pages": [
+                "src/Pages"
+            ],
+            "@Core": [
+                "src/Core"
+            ],
+            "@Templates": [
+                "src/Templates"
+            ],
+            "@Utils": [
+                "src/Utils"
+            ],
+            "@/*": [
+                "src/*"
+            ],
+            "@Admin/*": [
+                "src/Admin/*"
+            ],
+            "@Components/*": [
+                "src/Components/*"
+            ],
+            "@Redux/*": [
+                "src/Redux/*"
+            ],
+            "@Assets/*": [
+                "src/Assets/*"
+            ],
+            "@Config/*": [
+                "src/Config/*"
+            ],
+            "@HOC/*": [
+                "src/HOC/*"
+            ],
+            "@Layouts/*": [
+                "src/Layouts/*"
+            ],
+            "@Routers/*": [
+                "src/Routers/*"
+            ],
+            "@Services/*": [
+                "src/Services/*"
+            ],
+            "@Shared/*": [
+                "src/Shared/*"
+            ],
+            "@Pages/*": [
+                "src/Pages/*"
+            ],
+            "@Core/*": [
+                "src/Core/*"
+            ],
+            "@Templates/*": [
+                "src/Templates/*"
+            ],
+            "@Utils/*": [
+                "src/Utils/*"
+            ],
+        },
+    },
+}

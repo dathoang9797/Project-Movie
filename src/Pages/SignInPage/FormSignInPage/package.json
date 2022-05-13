@@ -1,0 +1,5 @@
+{
+  "name": "FormSignInPage",
+  "main": "./FormSignInPage.jsx",
+  "private": true
+}

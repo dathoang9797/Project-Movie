@@ -1,0 +1,5 @@
+{
+  "name": "AdminTemplate",
+  "main": "./AdminTemplate.jsx",
+  "private": true
+}

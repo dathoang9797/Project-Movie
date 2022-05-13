@@ -1,0 +1,5 @@
+{
+  "name": "FormInputNumber",
+  "main": "./FormInputNumber.jsx",
+  "private": true
+}

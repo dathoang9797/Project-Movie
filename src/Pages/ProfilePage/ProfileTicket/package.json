@@ -1,0 +1,5 @@
+{
+  "name": "ProfileTicket",
+  "main": "./ProfileTicket.jsx",
+  "private": true
+}

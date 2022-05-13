@@ -1,0 +1,5 @@
+{
+  "name": "Table",
+  "main": "./Table.jsx",
+  "private": true
+}

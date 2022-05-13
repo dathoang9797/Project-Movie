@@ -1,0 +1,5 @@
+{
+  "name": "ProfileModal",
+  "main": "./ProfileModal.jsx",
+  "private": true
+}

@@ -1,0 +1,5 @@
+{
+  "name": "ProfilePage",
+  "main": "./ProfilePage.jsx",
+  "private": true
+}

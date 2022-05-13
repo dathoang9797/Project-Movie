@@ -1,0 +1,5 @@
+{
+  "name": "RoomMap",
+  "main": "./RoomMap.jsx",
+  "private": true
+}

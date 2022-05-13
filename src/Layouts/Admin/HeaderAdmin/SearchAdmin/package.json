@@ -1,0 +1,5 @@
+{
+  "name": "SearchAdmin",
+  "main": "./SearchAdmin.jsx",
+  "private": true
+}

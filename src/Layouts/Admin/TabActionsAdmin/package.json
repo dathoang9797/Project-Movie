@@ -1,0 +1,5 @@
+{
+  "name": "TabActionsAdmin",
+  "main": "./TabActionsAdmin.jsx",
+  "private": true
+}

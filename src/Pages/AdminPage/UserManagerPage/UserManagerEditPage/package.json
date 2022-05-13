@@ -1,0 +1,5 @@
+{
+  "name": "UserManagerEditPage",
+  "main": "./UserManagerEditPage.jsx",
+  "private": true
+}

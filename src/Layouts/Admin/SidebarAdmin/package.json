@@ -1,0 +1,5 @@
+{
+  "name": "SidebarAdmin",
+  "main": "./SidebarAdmin.jsx",
+  "private": true
+}

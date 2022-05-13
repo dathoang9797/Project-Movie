@@ -1,0 +1,5 @@
+{
+  "name": "CardStats",
+  "main": "./CardStats.jsx",
+  "private": true
+}

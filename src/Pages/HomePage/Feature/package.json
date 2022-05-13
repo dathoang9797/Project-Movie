@@ -1,0 +1,5 @@
+{
+  "name": "Feature",
+  "main": "./Feature.jsx",
+  "private": true
+}

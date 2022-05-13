@@ -1,0 +1,5 @@
+{
+  "name": "HeaderPrimary",
+  "main": "./HeaderPrimary.jsx",
+  "private": true
+}

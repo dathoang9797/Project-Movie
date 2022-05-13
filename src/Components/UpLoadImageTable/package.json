@@ -1,0 +1,5 @@
+{
+  "name": "UpLoadImageTable",
+  "main": "./UpLoadImageTable.jsx",
+  "private": true
+}

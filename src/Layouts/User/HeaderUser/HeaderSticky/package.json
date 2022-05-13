@@ -1,0 +1,5 @@
+{
+  "name": "HeaderSticky",
+  "main": "./HeaderSticky.jsx",
+  "private": true
+}

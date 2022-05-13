@@ -1,0 +1,5 @@
+{
+  "name": "EvaluateManagerPage",
+  "main": "./EvaluateManagerPage.jsx",
+  "private": true
+}

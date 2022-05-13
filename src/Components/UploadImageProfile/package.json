@@ -1,0 +1,5 @@
+{
+  "name": "UploadImageProfile",
+  "main": "./UploadImageProfile.jsx",
+  "private": true
+}

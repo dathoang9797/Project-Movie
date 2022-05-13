@@ -1,0 +1,5 @@
+{
+  "name": "DetailGridImageModal",
+  "main": "./DetailGridImageModal.jsx",
+  "private": true
+}

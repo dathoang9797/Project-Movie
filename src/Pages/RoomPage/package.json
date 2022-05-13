@@ -1,0 +1,5 @@
+{
+  "name": "RoomPage",
+  "main": "./RoomPage.jsx",
+  "private": true
+}

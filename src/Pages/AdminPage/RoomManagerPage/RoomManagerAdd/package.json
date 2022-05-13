@@ -1,0 +1,5 @@
+{
+  "name": "RoomManagerAdd",
+  "main": "./RoomManagerAdd.jsx",
+  "private": true
+}

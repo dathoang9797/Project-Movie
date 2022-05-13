@@ -1,0 +1,5 @@
+{
+  "name": "RoomCard",
+  "main": "./RoomCard.jsx",
+  "private": true
+}

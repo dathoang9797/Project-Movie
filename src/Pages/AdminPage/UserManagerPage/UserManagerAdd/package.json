@@ -1,0 +1,5 @@
+{
+  "name": "UserManagerAdd",
+  "main": "./UserManagerAdd.jsx",
+  "private": true
+}

@@ -1,0 +1,5 @@
+{
+"name": "DetailReview",
+"main": "./DetailReview.jsx",
+"private": true
+}

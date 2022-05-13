@@ -1,0 +1,5 @@
+{
+  "name": "FormSwitch",
+  "main": "./FormSwitch.jsx",
+  "private": true
+}

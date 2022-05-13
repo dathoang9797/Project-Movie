@@ -1,0 +1,5 @@
+{
+  "name": "LocationManagerEditPage",
+  "main": "./LocationMangerEditPage.jsx",
+  "private": true
+}

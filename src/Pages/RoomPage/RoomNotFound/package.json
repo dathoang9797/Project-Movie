@@ -1,0 +1,5 @@
+{
+  "name": "RoomNotFound",
+  "main": "./RoomNotFound.jsx",
+  "private": true
+}

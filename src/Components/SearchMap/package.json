@@ -1,0 +1,5 @@
+{
+  "name": "SearchMap",
+  "main": "./SearchMap.jsx",
+  "private": true
+}

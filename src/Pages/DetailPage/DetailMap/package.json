@@ -1,0 +1,5 @@
+{
+  "name": "DetailMap",
+  "main": "./DetailMap.jsx",
+  "private": true
+}

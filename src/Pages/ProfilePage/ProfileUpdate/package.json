@@ -1,0 +1,5 @@
+{
+  "name": "ProfileUpdate",
+  "main": "./ProfileUpdate.jsx",
+  "private": true
+}

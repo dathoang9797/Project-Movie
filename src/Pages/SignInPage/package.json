@@ -1,0 +1,5 @@
+{
+  "name": "SiginPage",
+  "main": "./SignInPage.jsx",
+  "private": true
+}

@@ -1,0 +1,5 @@
+{
+  "name": "FormIcon",
+  "main": "./FormIcon.jsx",
+  "private": true
+}

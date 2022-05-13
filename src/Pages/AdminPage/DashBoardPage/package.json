@@ -1,0 +1,5 @@
+{
+  "name": "DashBoardPage",
+  "main": "./DashBoardPage.jsx",
+  "private": true
+}
