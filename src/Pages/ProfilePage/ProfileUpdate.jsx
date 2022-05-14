@@ -3,7 +3,7 @@ import ButtonScrollTop from '@Components/ButtonScrollTop';
 import UploadImageProfile from '@Components/UploadImageProfile';
 import ModalHoc from '@HOC/ModalHoc';
 import { quanLyVeSelector } from '@Redux/Selector/QuanLyVeSelector';
-import { quanLyVeThunk } from '@Redux/Thunk/QuanLyVeThunk';
+import { quanLyVeThunk } from '@/Redux/Thunk/QuanLyRapThunk';
 import { localService } from '@Services/LocalStorageService';
 import { messageApp, showWarning } from '@Utils/Common';
 import _ from 'lodash';

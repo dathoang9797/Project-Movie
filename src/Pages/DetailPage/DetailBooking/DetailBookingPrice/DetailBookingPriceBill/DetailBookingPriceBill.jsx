@@ -1,7 +1,7 @@
 import SpinnerMap from '@Components/SpinnerMap';
 import { loadingSelector } from '@Redux/Selector/LoadingSelect';
 import { quanLyPhongChoThueSelector } from '@Redux/Selector/QuanLyPhongChoThueSelector';
-import { quanLyPhongChoThueThunk } from '@Redux/Thunk/QuanLyPhongChoThueThunk';
+import { quanLyPhongChoThueThunk } from '@/Redux/Thunk/QuanLyPhim';
 import { messageApp, parseFloatNumber, showWarning } from '@Utils/Common';
 import _ from 'lodash';
 import React from 'react';

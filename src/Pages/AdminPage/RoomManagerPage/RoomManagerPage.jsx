@@ -1,7 +1,7 @@
 import { TableCSS } from '@Components';
 import TabActionsAdmin from '@Layouts/Admin/TabActionsAdmin';
 import { quanLyPhongChoThueSelector } from '@Redux/Selector/QuanLyPhongChoThueSelector';
-import { quanLyPhongChoThueThunk } from '@Redux/Thunk/QuanLyPhongChoThueThunk';
+import { quanLyPhongChoThueThunk } from '@/Redux/Thunk/QuanLyPhim';
 import { quanLyViTriThunk } from '@Redux/Thunk/QuanLyViTriThunk';
 import { nanoid } from '@reduxjs/toolkit';
 import { roomField } from '@Shared/Field/RoomField';

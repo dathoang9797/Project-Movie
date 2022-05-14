@@ -4,10 +4,10 @@ import { quanLyNguoiDungSelector } from '@Redux/Selector/QuanLyNguoiDungSelector
 import { quanLyPhongChoThueSelector } from '@Redux/Selector/QuanLyPhongChoThueSelector';
 import { quanLyVeSelector } from '@Redux/Selector/QuanLyVeSelector';
 import { quanLyViTriSelector } from '@Redux/Selector/QuanLyViTriSelector';
-import { quanLyDanhGiaThunk } from '@Redux/Thunk/QuanLyDanhGiaThunk';
+import { quanLyDanhGiaThunk } from '@/Redux/Thunk/QuanLyDatVeThunk';
 import { quanLyNguoiDungThunk } from '@Redux/Thunk/QuanLyNguoiDungThunk';
-import { quanLyPhongChoThueThunk } from '@Redux/Thunk/QuanLyPhongChoThueThunk';
-import { quanLyVeThunk } from '@Redux/Thunk/QuanLyVeThunk';
+import { quanLyPhongChoThueThunk } from '@/Redux/Thunk/QuanLyPhim';
+import { quanLyVeThunk } from '@/Redux/Thunk/QuanLyRapThunk';
 import { quanLyViTriThunk } from '@Redux/Thunk/QuanLyViTriThunk';
 import _ from 'lodash';
 import React, { useLayoutEffect } from 'react';

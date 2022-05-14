@@ -1,4 +1,4 @@
-import { quanLyPhongChoThueAction } from '@Redux/Reducers/QuanLyPhongChoThueSlice';
+import { quanLyPhongChoThueAction } from '@/Redux/Reducers/QuanLyPhimSlice';
 import { quanLyPhongChoThueSelector } from '@Redux/Selector/QuanLyPhongChoThueSelector';
 import moment from 'moment';
 import React, { useEffect, useState, useMemo } from 'react';

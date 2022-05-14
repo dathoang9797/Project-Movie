@@ -1,5 +1,5 @@
 import Form from '@Components/Form';
-import { quanLyDanhGiaThunk } from '@Redux/Thunk/QuanLyDanhGiaThunk';
+import { quanLyDanhGiaThunk } from '@/Redux/Thunk/QuanLyDatVeThunk';
 import { evaluateField } from '@Shared/Field/EvaluateField';
 import { addEvaluateSchema } from '@Shared/Schema/AddEvaluateSchema';
 import { useFormik } from 'formik';

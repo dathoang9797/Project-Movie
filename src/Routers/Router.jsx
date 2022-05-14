@@ -10,9 +10,7 @@ const SignUpPage = lazy(() => import('@Pages/SignUpPage'));
 const DetailPage = lazy(() => import('@Pages/DetailPage'));
 const RoomPage = lazy(() => import('@Pages/RoomPage'));
 const NotFoundPage = lazy(() => import('@Pages/NotFoundPage'));
-
 const DashBoardPage = lazy(() => import('@Pages/AdminPage/DashBoardPage'));
-
 const LocationManagerPage = lazy(() => import('@Pages/AdminPage/LocationManagerPage'));
 const LocationManagerEditPage = lazy(() =>
   import('@Pages/AdminPage/LocationManagerPage/LocationManagerEditPage')
@@ -27,7 +25,6 @@ const UserManagerEditPage = lazy(() =>
 const UserManagerProfilePage = lazy(() =>
   import('@Pages/AdminPage/UserManagerPage/UserManagerProfilePage')
 );
-
 const RoomManagerPage = lazy(() => import('@Pages/AdminPage/RoomManagerPage'));
 const RoomManagerEditPage = lazy(() =>
   import('@Pages/AdminPage/RoomManagerPage/RoomManagerEditPage')
@@ -35,9 +32,7 @@ const RoomManagerEditPage = lazy(() =>
 const RoomManagerProfilePage = lazy(() =>
   import('@Pages/AdminPage/RoomManagerPage/RoomManagerProfilePage')
 );
-
-const EvaluateManagerPage = lazy(() => import('@Pages/AdminPage/EvaluateManagerPage'));
-
+const EvaluateManagerPage = lazy(() => import('@Pages/AdminPage/EvaluateManagerPage'))
 const TicketManagerPage = lazy(() => import('@Pages/AdminPage/TicketManagerPage'));
 
 export const routerUserTemplate = [

@@ -1,11 +1,11 @@
 import { Images } from '@Assets/Images';
 import { ButtonScrollTop, SearchMap, SpinnerMap } from '@Components';
-import { quanLyPhongChoThueAction } from '@Redux/Reducers/QuanLyPhongChoThueSlice';
+import { quanLyPhongChoThueAction } from '@/Redux/Reducers/QuanLyPhimSlice';
 import { quanLyViTriAction } from '@Redux/Reducers/QuanLyViTriSlice';
 import { loadingSelector } from '@Redux/Selector/LoadingSelect';
 import { quanLyPhongChoThueSelector } from '@Redux/Selector/QuanLyPhongChoThueSelector';
 import { quanLyViTriSelector } from '@Redux/Selector/QuanLyViTriSelector';
-import { quanLyPhongChoThueThunk } from '@Redux/Thunk/QuanLyPhongChoThueThunk';
+import { quanLyPhongChoThueThunk } from '@/Redux/Thunk/QuanLyPhim';
 import { quanLyViTriThunk } from '@Redux/Thunk/QuanLyViTriThunk';
 import { geoCodeService } from '@Services/GeoCodeService';
 import { localService } from '@Services/LocalStorageService';

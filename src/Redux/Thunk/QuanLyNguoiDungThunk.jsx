@@ -23,265 +23,71 @@ const { sweetAlertDelete, sweetAlertSuccess } = sweetAlert;
 
 const setUserInfoAsync = createAsyncThunk(
   'quanLyNguoiDungReducer/setUserInfoAsync',
-  async (ThongTinDangNhap, { rejectWithValue }) => {
-    const result = await xacThucNguoiDungService.dangNhap(ThongTinDangNhap);
-    const urlHome = process.env.REACT_APP_LINK_HOME;
+  async (ThongTinDangNhapVM, { rejectWithValue, dispatch }) => {
+    const result = await quanLyNguoiDungService.dangNhap(ThongTinDangNhapVM);
 
-    if (!result) {
-      return rejectWithValue(messageNetWorkErr);
+    if (typeof result.content === 'string') {
+      return rejectWithValue(result.content);
     }
 
-    if (_.isEmpty(result)) {
-      return rejectWithValue(messageLoginFailed);
-    }
-
-    if (!('user' in result)) {
-      return rejectWithValue(capitalize(result.message));
-    }
-
-    if ('message' in result && !('user' in result)) {
-      return rejectWithValue(messageLoginFailed);
-    }
-
-    showSuccess(capitalize(result.message));
-    result.user.token = result.token;
-    localService.setUserInfo(result.user);
-    history.push(urlHome);
-    return result.user;
+    localService.setUserInfo(result.content);
+    History.goBack();
+    return result.content;
   }
 );
 
-const setRegisterUserInfoAsync = createAsyncThunk(
-  'quanLyNguoiDungReducer/setRegisterUserInfoAsync',
-  async (ThongTinDangKy, { rejectWithValue, dispatch, getState }) => {
-    const urlSignIn = process.env.REACT_APP_LINK_SIGN_IN;
-    const state = getState();
-    const danhSachNguoiDung = state.QuanLyNguoiDungReducer.danhSachNguoiDung;
-    const { email } = ThongTinDangKy;
-
-    if (danhSachNguoiDung.filter((item) => item.email === email).length === 0) {
-      const result = await xacThucNguoiDungService.dangKy(ThongTinDangKy);
-
-      if (!result) {
-        return rejectWithValue(messageNetWorkErr);
-      }
-
-      if (_.isEmpty(result)) {
-        return rejectWithValue(messageRegisterFailed);
-      }
-
-      if (typeof result === 'string') {
-        return rejectWithValue(result);
-      }
-
-      if ('message' in result) {
-        return rejectWithValue(capitalize(result.message));
-      }
-
-      showSuccess(messageRegisterSucceed);
-      history.push(urlSignIn);
-      return;
+const setThongTinNguoiDungAsync = createAsyncThunk(
+  'quanLyNguoiDungReducer/setThongTinNguoiDungAsync',
+  async (_, { rejectWithValue, dispatch }) => {
+    const result = await quanLyNguoiDungService.thongTinTaiKhoan();
+    if (typeof result.content === 'string') {
+      return rejectWithValue(result.content);
     }
-    return rejectWithValue(messageNameOrEmailIsExits);
+
+    return result.content;
   }
 );
 
 const getDanhSachNguoiDungAsync = createAsyncThunk(
   'quanLyNguoiDungReducer/getDanhSachNguoiDungAsync',
   async (_, { rejectWithValue }) => {
-    const result = await quanLyNguoiDungService.layTatCaNguoiDung();
-
-    if (!result) {
-      return rejectWithValue(messageNetWorkErr);
+    const maNhom = process.env.REACT_APP_MA_NHOM_GP01;
+    const result = await quanLyNguoiDungService.layDanhSachNguoiDung(maNhom);
+    if (typeof result.content === 'string') {
+      return rejectWithValue(result.content);
     }
-
-    if (typeof result === 'string') {
-      return rejectWithValue(result);
-    }
-
-    if ('message' in result) {
-      return rejectWithValue(capitalize(result.message));
-    }
-
-    return result;
-  }
-);
-
-const xoaNguoiDungAsync = createAsyncThunk(
-  'quanLyNguoiDungReducer/xoaNguoiDungAsync',
-  async (idNguoiDung, { rejectWithValue, dispatch }) => {
-    const confirmResult = await sweetAlertDelete();
-    if (confirmResult.isConfirmed) {
-      const result = await quanLyNguoiDungService.xoaNguoiDung(idNguoiDung);
-
-      if (!result) {
-        return rejectWithValue(messageNetWorkErr);
-      }
-
-      if (typeof result === 'string') {
-        return rejectWithValue(result);
-      }
-
-      if ('message' in result) {
-        return rejectWithValue(capitalize(result.message));
-      }
-
-      await dispatch(getDanhSachNguoiDungAsync());
-      sweetAlertSuccess(messageDeleteUserSuccess);
-    }
-  }
-);
-
-const xoaNhieuNguoiDungAsync = createAsyncThunk(
-  'quanLyNguoiDungReducer/xoaNhieuNguoiDungAsync',
-  async (idNguoiDungArr, { rejectWithValue, dispatch }) => {
-    const confirmResult = await sweetAlertDelete();
-    if (confirmResult.isConfirmed) {
-      const promisesArr = idNguoiDungArr.map((idNguoiDung) =>
-        quanLyNguoiDungService.xoaNguoiDung(idNguoiDung)
-      );
-      const result = await Promise.all(promisesArr);
-
-      if (!result) {
-        return rejectWithValue(messageNetWorkErr);
-      }
-
-      if (typeof result === 'string') {
-        return rejectWithValue(result);
-      }
-
-      if ('message' in result) {
-        return rejectWithValue(capitalize(result.message));
-      }
-
-      await dispatch(getDanhSachNguoiDungAsync());
-      sweetAlertSuccess(messageDeleteUserSuccess);
-    }
-  }
-);
-
-const capNhatNguoiDungAsync = createAsyncThunk(
-  'quanLyNguoiDungReducer/capNhatNguoiDungAsync',
-  async ({ idNguoiDung, noiDungCapNhat }, { rejectWithValue, dispatch }) => {
-    const result = await quanLyNguoiDungService.capNhatNguoiDung(idNguoiDung, noiDungCapNhat);
-
-    if (!result) {
-      return rejectWithValue(messageNetWorkErr);
-    }
-
-    if (_.isEmpty(result)) {
-      return rejectWithValue(messageUpdateFailed);
-    }
-
-    if (typeof result === 'string') {
-      return rejectWithValue(result);
-    }
-
-    if ('message' in result) {
-      return rejectWithValue(capitalize(result.message));
-    }
-
-    showSuccess(messageUpdateSuccess);
-    history.goBack();
-  }
-);
-
-const capNhatProfileAsync = createAsyncThunk(
-  'quanLyNguoiDungReducer/capNhatProfileAsync',
-  async (
-    { idNguoiDung, noiDungCapNhat, isLoading, isLoadingPopup },
-    { rejectWithValue, dispatch }
-  ) => {
-    const result = await quanLyNguoiDungService.capNhatNguoiDung(
-      idNguoiDung,
-      noiDungCapNhat,
-      isLoading,
-      isLoadingPopup
-    );
-    const { updateUserInfo } = quanLyNguoiDungAction;
-    if (!result) {
-      return rejectWithValue(messageNetWorkErr);
-    }
-
-    if (_.isEmpty(result)) {
-      return rejectWithValue(messageUpdateFailed);
-    }
-
-    if (typeof result === 'string') {
-      return rejectWithValue(result);
-    }
-
-    if ('message' in result) {
-      return rejectWithValue(capitalize(result.message));
-    }
-    const userInfo = localService.getUserInfo();
-    const userUpdate = { ...userInfo, ...result };
-    localService.setUserInfo(userUpdate);
-    dispatch(updateUserInfo(userUpdate));
-    showSuccess(messageUpdateSuccess);
-  }
-);
-
-const taoNguoiDungAsync = createAsyncThunk(
-  'quanLyNguoiDungReducer/taoNguoiDungAsync',
-  async (nguoiDung, { rejectWithValue, dispatch, getState }) => {
-    const state = getState();
-    const danhSachNguoiDung = state.QuanLyNguoiDungReducer.danhSachNguoiDung;
-    const { email } = nguoiDung;
-
-    if (danhSachNguoiDung.filter((item) => item.email === email).length === 0) {
-      const result = await quanLyNguoiDungService.taoNguoiDung(nguoiDung);
-
-      if (!result) {
-        return rejectWithValue(messageNetWorkErr);
-      }
-
-      if (typeof result === 'string') {
-        return rejectWithValue(result);
-      }
-
-      if ('message' in result) {
-        return rejectWithValue(capitalize(result.message));
-      }
-
-      await dispatch(getDanhSachNguoiDungAsync());
-
-      showSuccess(messageRegisterSucceed);
-      return;
-    }
-    return rejectWithValue(messageNameOrEmailIsExits);
+    return result.content;
   }
 );
 
 const getChiTietNguoiDungAsync = createAsyncThunk(
   'quanLyNguoiDungReducer/getChiTietNguoiDungAsync',
-  async (idNguoiDung, { rejectWithValue }) => {
-    const result = await quanLyNguoiDungService.layNguoiDungTheoID(idNguoiDung);
-
-    if (!result) {
-      return rejectWithValue(messageNetWorkErr);
+  async (taiKhoan, { rejectWithValue }) => {
+    console.log({ taiKhoan });
+    const result = await quanLyNguoiDungService.layThongTinNguoiDung(taiKhoan);
+    console.log({ result });
+    if (typeof result.content === 'string') {
+      return rejectWithValue(result.content);
     }
+    return result.content;
+  }
+);
 
-    if (typeof result === 'string') {
-      return rejectWithValue(result);
+const setXoaNguoiDungAsync = createAsyncThunk(
+  'quanLyNguoiDungReducer/setXoaNguoiDungAsync',
+  async (taiKhoan, { rejectWithValue }) => {
+    const result = await quanLyNguoiDungService.xoaNguoiDung(taiKhoan);
+    if (result.statusCode !== 200) {
+      return rejectWithValue(result.content);
     }
-
-    if ('message' in result) {
-      return rejectWithValue(capitalize(result.message));
-    }
-
-    return result;
+    showSuccess(result.content);
   }
 );
 
 export const quanLyNguoiDungThunk = {
   setUserInfoAsync,
-  setRegisterUserInfoAsync,
+  setThongTinNguoiDungAsync,
   getDanhSachNguoiDungAsync,
-  xoaNguoiDungAsync,
-  capNhatNguoiDungAsync,
+  setXoaNguoiDungAsync,
   getChiTietNguoiDungAsync,
-  taoNguoiDungAsync,
-  xoaNhieuNguoiDungAsync,
-  capNhatProfileAsync,
 };

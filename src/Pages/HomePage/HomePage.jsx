@@ -1,5 +1,5 @@
 import ButtonScrollTop from '@Components/ButtonScrollTop';
-import { quanLyPhongChoThueThunk } from '@Redux/Thunk/QuanLyPhongChoThueThunk';
+import { quanLyPhongChoThueThunk } from '@/Redux/Thunk/QuanLyPhim';
 import { quanLyViTriThunk } from '@Redux/Thunk/QuanLyViTriThunk';
 import React, { useLayoutEffect } from 'react';
 import { useDispatch } from 'react-redux';

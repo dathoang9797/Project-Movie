@@ -2,7 +2,7 @@ import { TableCSS } from '@Components';
 import ModalHoc from '@HOC/ModalHoc';
 import TabActionsAdmin from '@Layouts/Admin/TabActionsAdmin';
 import { quanLyDanhGiaSelector } from '@Redux/Selector/QuanLyDanhGiaSelector';
-import { quanLyDanhGiaThunk } from '@Redux/Thunk/QuanLyDanhGiaThunk';
+import { quanLyDanhGiaThunk } from '@/Redux/Thunk/QuanLyDatVeThunk';
 import { nanoid } from '@reduxjs/toolkit';
 import { evaluateField } from '@Shared/Field/EvaluateField';
 import { handleDataTable } from '@Utils/Common';

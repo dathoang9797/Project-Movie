@@ -3,7 +3,7 @@ import { DateRange } from 'react-date-range';
 import * as locales from 'react-date-range/dist/locale';
 import moment from 'moment';
 import { DetailBookingDatePickerCSS } from './DetailBookingDatePicker.styles';
-import { quanLyPhongChoThueAction } from '@Redux/Reducers/QuanLyPhongChoThueSlice';
+import { quanLyPhongChoThueAction } from '@/Redux/Reducers/QuanLyPhimSlice';
 import { useDispatch, batch, shallowEqual, useSelector } from 'react-redux';
 import { quanLyPhongChoThueSelector } from '@Redux/Selector/QuanLyPhongChoThueSelector';
 

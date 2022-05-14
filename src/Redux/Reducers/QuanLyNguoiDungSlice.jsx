@@ -1,17 +1,14 @@
 import { quanLyNguoiDungThunk } from '@Redux/Thunk/QuanLyNguoiDungThunk';
 import { createSlice } from '@reduxjs/toolkit';
 import { showError } from '@Utils/Common';
+import { nanoid } from '@reduxjs/toolkit';
 
 const {
+  setThongTinNguoiDungAsync,
   setUserInfoAsync,
-  setRegisterUserInfoAsync,
   getDanhSachNguoiDungAsync,
-  xoaNguoiDungAsync,
-  capNhatNguoiDungAsync,
+  setXoaNguoiDungAsync,
   getChiTietNguoiDungAsync,
-  capNhatProfileAsync,
-  taoNguoiDungAsync,
-  xoaNhieuNguoiDungAsync,
 } = quanLyNguoiDungThunk;
 
 const initialState = {
@@ -33,79 +30,45 @@ const quanLyNguoiDungSlice = createSlice({
       state.userInfo = action.payload;
     });
     builder.addCase(setUserInfoAsync.rejected, (state, action) => {
-      if (action.payload) {
-        showError(action.payload);
-      } else {
-        showError(action.error.message);
-      }
+      if (!action.payload) return;
+      showError(action.payload);
     });
-    builder.addCase(setRegisterUserInfoAsync.rejected, (state, action) => {
-      if (action.payload) {
-        showError(action.payload);
-      } else {
-        showError(action.error.message);
-      }
+    builder.addCase(setThongTinNguoiDungAsync.fulfilled, (state, action) => {
+      state.thongTinNguoiDung.thongTinDatVe?.map((thongTinNguoiDung) => {
+        thongTinNguoiDung.idNguoiDung = nanoid();
+        thongTinNguoiDung.danhSachGhe.map((gheND) => {
+          gheND.idDanhSachNguoiDung = nanoid();
+        });
+        return thongTinNguoiDung;
+      });
+      state.thongTinNguoiDung = action.payload;
     });
-
+    builder.addCase(setThongTinNguoiDungAsync.rejected, (state, action) => {
+      if (!action.payload) return;
+      showError(action.payload);
+    });
     builder.addCase(getDanhSachNguoiDungAsync.fulfilled, (state, action) => {
       state.danhSachNguoiDung = action.payload;
     });
     builder.addCase(getDanhSachNguoiDungAsync.rejected, (state, action) => {
-      if (action.payload) {
-        showError(action.payload);
-      } else {
-        showError(action.error.message);
-      }
+      if (!action.payload) return;
+      showError(action.payload);
     });
-    builder.addCase(xoaNguoiDungAsync.rejected, (state, action) => {
-      if (action.payload) {
-        showError(action.payload);
-      } else {
-        showError(action.error.message);
-      }
-    });
-    builder.addCase(xoaNhieuNguoiDungAsync.rejected, (state, action) => {
-      if (action.payload) {
-        showError(action.payload);
-      } else {
-        showError(action.error.message);
-      }
-    });
-    builder.addCase(taoNguoiDungAsync.rejected, (state, action) => {
-      if (action.payload) {
-        showError(action.payload);
-      } else {
-        showError(action.error.message);
-      }
+    builder.addCase(setXoaNguoiDungAsync.rejected, (state, action) => {
+      if (!action.payload) return;
+      showError(action.payload);
     });
     builder.addCase(getChiTietNguoiDungAsync.fulfilled, (state, action) => {
       state.chiTietNguoiDung = action.payload;
     });
     builder.addCase(getChiTietNguoiDungAsync.rejected, (state, action) => {
-      if (action.payload) {
-        showError(action.payload);
-      } else {
-        showError(action.error.message);
-      }
-    });
-    builder.addCase(capNhatNguoiDungAsync.rejected, (state, action) => {
-      if (action.payload) {
-        showError(action.payload);
-      } else {
-        showError(action.error.message);
-      }
-    });
-    builder.addCase(capNhatProfileAsync.rejected, (state, action) => {
-      if (action.payload) {
-        showError(action.payload);
-      } else {
-        showError(action.error.message);
-      }
+      if (!action.payload) return;
+      showError(action.payload);
     });
   },
 });
-const { setSearchValue,updateUserInfo } = quanLyNguoiDungSlice.actions;
+const { setSearchValue, updateUserInfo } = quanLyNguoiDungSlice.actions;
 
-export const quanLyNguoiDungAction = { setSearchValue,updateUserInfo };
+export const quanLyNguoiDungAction = { setSearchValue, updateUserInfo };
 
 export default quanLyNguoiDungSlice.reducer;

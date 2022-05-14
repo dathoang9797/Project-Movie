@@ -1,5 +1,5 @@
 import Form from '@Components/Form';
-import { quanLyPhongChoThueThunk } from '@Redux/Thunk/QuanLyPhongChoThueThunk';
+import { quanLyPhongChoThueThunk } from '@/Redux/Thunk/QuanLyPhim';
 import { quanLyViTriSelector } from '@Redux/Selector/QuanLyViTriSelector';
 import { roomField } from '@Shared/Field/RoomField';
 import { addRoomSchema } from '@Shared/Schema/AddRoomSchema';

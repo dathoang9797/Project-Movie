@@ -2,7 +2,7 @@ import { Images } from '@Assets/Images';
 import { quanLyViTriAction } from '@Redux/Reducers/QuanLyViTriSlice';
 import { quanLyPhongChoThueSelector } from '@Redux/Selector/QuanLyPhongChoThueSelector';
 import { quanLyViTriSelector } from '@Redux/Selector/QuanLyViTriSelector';
-import { quanLyPhongChoThueThunk } from '@Redux/Thunk/QuanLyPhongChoThueThunk';
+import { quanLyPhongChoThueThunk } from '@/Redux/Thunk/QuanLyPhim';
 import { removeSpace, removeUnicode } from '@Utils/Common';
 import _ from 'lodash';
 import React, { useCallback, useEffect, useRef, useState } from 'react';

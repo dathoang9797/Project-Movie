@@ -3,7 +3,7 @@ import { showWarning } from '@Utils/Common';
 import Form from '@Components/Form';
 import { quanLyPhongChoThueSelector } from '@Redux/Selector/QuanLyPhongChoThueSelector';
 import { quanLyViTriSelector } from '@Redux/Selector/QuanLyViTriSelector';
-import { quanLyPhongChoThueThunk } from '@Redux/Thunk/QuanLyPhongChoThueThunk';
+import { quanLyPhongChoThueThunk } from '@/Redux/Thunk/QuanLyPhim';
 import { roomField } from '@Shared/Field/RoomField';
 import { messageApp } from '@Utils/Common';
 import { useFormik } from 'formik';
